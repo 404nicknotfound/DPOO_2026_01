@@ -2,8 +2,12 @@ package uniandes.dpoo.aerolinea.consola;
 
 import java.io.IOException;
 
+import uniandes.dpoo.aerolinea.exceptions.AeropuertoDuplicadoException;
 import uniandes.dpoo.aerolinea.exceptions.InformacionInconsistenteException;
 import uniandes.dpoo.aerolinea.modelo.Aerolinea;
+import uniandes.dpoo.aerolinea.modelo.Aeropuerto;
+import uniandes.dpoo.aerolinea.modelo.Avion;
+import uniandes.dpoo.aerolinea.modelo.Ruta;
 import uniandes.dpoo.aerolinea.persistencia.CentralPersistencia;
 import uniandes.dpoo.aerolinea.persistencia.TipoInvalidoException;
 
@@ -13,6 +17,9 @@ public class ConsolaArerolinea extends ConsolaBasica
 
     /**
      * Es un método que corre la aplicación y realmente no hace nada interesante: sólo muestra cómo se podría utilizar la clase Aerolínea para hacer pruebas.
+     *
+     * Para que cargarTiquetes funcione, la aerolínea debe tener ya cargadas las rutas y vuelos a los que hacen referencia los tiquetes.
+     * Por eso se llama primero a inicializarAerolineaParaDemo() (o en un caso real, cargarAerolinea desde archivo).
      */
     public void correrAplicacion( )
     {
@@ -29,7 +36,7 @@ public class ConsolaArerolinea extends ConsolaBasica
         }
         catch( IOException e )
         {
-            e.printStackTrace();
+            e.printStackTrace( );
         }
         catch( InformacionInconsistenteException e )
         {

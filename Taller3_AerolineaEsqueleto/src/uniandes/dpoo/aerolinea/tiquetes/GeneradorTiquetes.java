@@ -38,6 +38,7 @@ public class GeneradorTiquetes
         while( codigo.length( ) < 7 )
             codigo = "0" + codigo;
 
+        codigos.add( codigo );
         return new Tiquete( codigo, vuelo, cliente, tarifa );
     }
 
@@ -45,9 +46,8 @@ public class GeneradorTiquetes
      * Registra que un cierto tiquete ya fue vendido, para que el generador de tiquetes no vaya a generar otro tiquete con el mismo código
      * @param unTiquete El tiquete existente
      */
-    public static void registrarTiquete( Tiquete unTiquete )
-    {
-        // TODO implementar
+    public static void registrarTiquete( Tiquete unTiquete ) {
+        codigos.add( unTiquete.getCodigo( ) );
     }
 
     /**
@@ -55,9 +55,7 @@ public class GeneradorTiquetes
      * @param codigoTiquete El código que se quiere consultar
      * @return Retorna true si ya se tenía registrado un tiquete con el código dado
      */
-    public static boolean validarTiquete( String codigoTiquete )
-    {
-        // TODO implementar
-        return false;
+    public static boolean validarTiquete( String codigoTiquete ) {
+        return codigos.contains( codigoTiquete );
     }
 }
