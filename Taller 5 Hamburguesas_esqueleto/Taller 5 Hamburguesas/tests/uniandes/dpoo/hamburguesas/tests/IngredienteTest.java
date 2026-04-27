@@ -6,6 +6,7 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import uniandes.dpoo.hamburguesas.excepciones.IngredienteRepetidoException;
 import uniandes.dpoo.hamburguesas.mundo.Ingrediente;
 
 public class IngredienteTest
