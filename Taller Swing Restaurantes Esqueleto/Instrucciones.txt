@@ -1,0 +1,8 @@
+Abrir la clase VentanaPrincipal.java ubicada en el paquete uniandes.dpoo.swing.interfaz.principal
+Ejecutar el método main con Run → Run As → Java Application
+
+Uso de la aplicación
+
+--La ventana principal muestra la lista de restaurantes. Al hacer click en uno se ven sus detalles abajo
+--Botón Nuevo: abre una ventana para agregar un restaurante. Se puede hacer click en el mapa para marcar su ubicación, luego llenar el formulario y dar click en Crear restaurante
+--Botón Ver todos: abre el mapa con todos los restaurantes marcados. Se puede alternar entre Todos y Visitados con los radio buttons
